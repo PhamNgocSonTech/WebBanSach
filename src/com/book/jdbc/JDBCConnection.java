@@ -13,7 +13,7 @@ public class JDBCConnection {
 			String pass = "sa123";
 			String url = "jdbc:sqlserver://localhost:1433;databaseName=UNIFY";
 			connection = DriverManager.getConnection(url, user, pass);
-			System.out.println("thanh cong");
+			System.out.println("Success Connect Database");
 			
 		} catch (ClassNotFoundException | SQLException ex) {
 			ex.printStackTrace();
