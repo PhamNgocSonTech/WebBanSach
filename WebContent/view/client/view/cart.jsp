@@ -3,8 +3,7 @@
 	pageEncoding="ISO-8859-1"%>
 <ul class="list-inline shop-badge badge-lists badge-icons pull-right">
 	<li><a href="#"><i class="fa fa-shopping-cart"></i></a> <c:set
-			var="count" value="${0}" /> <c:forEach items="${sessionScope.cart}"
-			var="map">
+			var="count" value="${0}" /> <c:forEach items="${sessionScope.cart}" var="map">
 			<c:set var="count" value="${count + map.value.quantity}" />
 		</c:forEach> <span class="badge badge-sea rounded-x">${count }</span>
 
@@ -27,10 +26,11 @@
 					<span>Subtotal</span>
 					<c:set var="total" value="${0}" />
 					<c:forEach items="${sessionScope.cart}" var="map">
-						<c:set var="total" value="${total + map.value.quantity * map.value.product.price}" />
+						<c:set var="total"
+							value="${total + map.value.quantity * map.value.product.price}" />
 					</c:forEach>
 					<span class="pull-right subtotal-cost">$ ${total }</span>
-					
+
 				</div>
 				<div class="row">
 					<div class="col-xs-6">
